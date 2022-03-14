@@ -30,11 +30,12 @@ public class SendMailSina extends TestSinaMail {
             logger.info("文件上传报错");
         }
 
-        logger.info("发送");
+        logger.info("发送邮件");
         driver.findElement(By.xpath("//*[@id='panel_main']/div[1]/span/span[1]/a/i[2]")).click();
-        logger.info("jieshu");
+        logger.info("发送完成");
+        Thread.sleep(1000);
         String endAss = driver.findElement(By.xpath("//*[@id='send_normal']/div/p[1]")).getText();
-        logger.info(endAss);
+        logger.info("获取发送完成后的文字信息"+endAss);
         String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
 
         if (endAss.equals(end)) {
