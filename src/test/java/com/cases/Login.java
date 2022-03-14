@@ -21,7 +21,7 @@ public class Login extends ExcelReport {
 
     public final static Logger logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
 
-    public static String testfile = System.getProperty("user.dir") + "/src/main/resources/7.20部分商品上新清单1.xlsx" ;
+    public static String testfile = System.getProperty("user.dir") + "/src/main/resources/TestFile.xlsx" ;
 
     public static String dataFileTest = System.getProperty("user.dir")+ "\\src\\main\\resources\\datas\\TestData.xlsx";
 
