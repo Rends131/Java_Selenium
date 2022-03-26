@@ -12,7 +12,7 @@ public class Login126Page extends Test126Mail {
     private String className = this.getClass().getName();
 
     // 登录163邮箱
-    public void login126Mail(String mailUrl, String username, String password, String titleAst) throws InterruptedException {
+    public void login126Mail(String reportFile,String mailUrl, String username, String password, String titleAst) throws InterruptedException {
         driver.get(mailUrl);
         logger.info("进入126邮箱");
         String currentUrl = driver.getCurrentUrl();
@@ -45,9 +45,9 @@ public class Login126Page extends Test126Mail {
         String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
 
         if (impatl.equals(titleAst)) {
-            writeExcel(packageName + "登录测试", className, methodName, "126登录", "pass", "");
+            writeExcel(reportFile,packageName + "登录测试", className, methodName, "126登录", "pass", "");
         } else {
-            writeExcel(packageName + "登录测试", className, methodName, "126登录", "fail", "登录失败");
+            writeExcel(reportFile,packageName + "登录测试", className, methodName, "126登录", "fail", "登录失败");
         }
 
     }

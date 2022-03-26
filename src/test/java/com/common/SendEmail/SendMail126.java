@@ -12,7 +12,7 @@ public class SendMail126 extends Test126Mail {
     //获取类名
     private String className = this.getClass().getName();
 
-    public void sen126Mail(String recipient, String subject, String filePath, String end) throws InterruptedException {
+    public void sen126Mail(String reportFile,String recipient, String subject, String filePath, String end) throws InterruptedException {
         logger.info("126邮箱：点击写信");
         driver.findElement(By.xpath("//*[@id='_mail_component_149_149']/span[2]")).click(); //点击写信
 
@@ -25,7 +25,7 @@ public class SendMail126 extends Test126Mail {
 
         try {
             logger.info("126邮箱：上传文件");
-            driver.findElement(By.xpath("//*[@title='一次可发送2000张照片，600首MP3，一部高清电影']/input")).sendKeys(filePath);//添加附件
+            driver.findElement(By.xpath("//*[@title='一次可发送2000张照片，600首MP3，一部高清电影']/input")).sendKeys(reportFile);//添加附件
             Thread.sleep(10000);
         } catch (RuntimeException ex) {
             logger.info(ex);
@@ -49,9 +49,9 @@ public class SendMail126 extends Test126Mail {
 
         if (useraddr.equals(end)) {
             logger.info("126邮箱：断言成功");
-            writeExcel(packageName + "发送邮件测试", className, methodName, "文件hash:" + fileHash, "pass", "");
+            writeExcel(reportFile,packageName + "发送邮件测试", className, methodName, "文件hash:" + fileHash, "pass", "");
         } else {
-            writeExcel(packageName + "发送邮件测试", className, methodName, "文件hash:" + fileHash, "fail", "登录失败");
+            writeExcel(reportFile,packageName + "发送邮件测试", className, methodName, "文件hash:" + fileHash, "fail", "登录失败");
         }
     }
 }

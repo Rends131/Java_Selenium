@@ -21,12 +21,16 @@ public class Login extends ExcelReport {
 
     public final static Logger logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
 
-    public static String testfile = System.getProperty("user.dir") + "/src/main/resources/TestFile.xlsx" ;
+//    // idea使用文件路径
+//    public static String testfile = System.getProperty("user.dir") + "/src/main/resources/TestFile.xlsx" ; // 发送的文件
+//    public static String dataFileTest = System.getProperty("user.dir")+ "/src/main/resources/datas/TestData.xlsx"; // 参数化的文件
+//    public static String reprotFile = System.getProperty("user.dir")+ "/src/main/resources/datas/TestReport.xlsx"; // 测试报告
 
-    public static String dataFileTest = System.getProperty("user.dir")+ "\\src\\main\\resources\\datas\\TestData.xlsx";
 
-    public static String reprotFile = System.getProperty("user.dir")+ "\\src\\main\\resources\\datas\\TestData.xlsx";
-
+    // MAV 打包使用文件路径
+    public static String testfile = System.getProperty("user.dir") + "/classes/TestFile.xlsx" ; // 发送的文件
+    public static String dataFileTest = System.getProperty("user.dir")+ "/classes/datas/TestData.xlsx"; // 参数化的文件
+    public static String reportFile = System.getProperty("user.dir")+ "/classes/datas/TestReport.xlsx"; // 测试报告
 
     //测试前初始化
     @BeforeMethod

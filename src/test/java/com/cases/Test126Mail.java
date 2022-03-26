@@ -36,9 +36,9 @@ public class Test126Mail extends Login {
 
     @Test(dataProvider = "Login126")
     public void LoginTest(String mailUrl, String account, String password, String recipient, String subject, String filePath, String titleAst, String end) throws InterruptedException {
-        login126Page.login126Mail(mailUrl, account, password, titleAst);
+        login126Page.login126Mail(reportFile,mailUrl, account, password, titleAst);
         logger.info("3,发送邮件");
-        sendMail126.sen126Mail(recipient, subject, testfile, end);
+        sendMail126.sen126Mail(reportFile,recipient, subject, testfile, end);
     }
 
 }

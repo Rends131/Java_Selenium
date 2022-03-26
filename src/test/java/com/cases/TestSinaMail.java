@@ -26,8 +26,8 @@ public class TestSinaMail extends Login{
 
     @Test(dataProvider = "LoginSina")
     public void LoginSinaTest(String mailUrl,String account,String password,String recipient,String Subject,String filePath,String titleAst,String end) throws InterruptedException {
-            LoginSinaPage.loginSinaMali(mailUrl,account,password,titleAst);
-            SendMailSina.senSinaMail(recipient,Subject,testfile,titleAst);
+            LoginSinaPage.loginSinaMali(reportFile,mailUrl,account,password,titleAst);
+            SendMailSina.senSinaMail(reportFile,recipient,Subject,testfile,titleAst);
 
     }
 

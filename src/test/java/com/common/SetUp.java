@@ -6,12 +6,15 @@ import java.io.*;
 import java.util.Properties;
 
 public class SetUp {
-    public void setPorperty(){
-        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
+    //    public void setPorperty(){
+//        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
+//    }
+    public void setPorperty() {
+        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/classes/chromedriver.exe");
     }
 
     //访问的ip
-    public static String getBaseUrl(String url){
+    public static String getBaseUrl(String url) {
         Properties porp = new Properties();
         String baseUrl = null;
         try {

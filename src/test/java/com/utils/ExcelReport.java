@@ -14,11 +14,11 @@ import java.util.Date;
 public class ExcelReport {
     public static int runNumber = 1;
 
-    public static void writeExcel(String packageName, String className, String methodName, String remark, String result, String reason) {
+    public static void writeExcel(String reportFile,String packageName, String className, String methodName, String remark, String result, String reason) {
         try {
 
-            String path = System.getProperty("user.dir") + "/src/main/resources/datas/TestReport.xlsx";
-            XSSFWorkbook wb = new XSSFWorkbook(new FileInputStream(path));
+//            String path = System.getProperty("user.dir") + "/src/main/resources/datas/TestReport.xlsx";
+            XSSFWorkbook wb = new XSSFWorkbook(new FileInputStream(reportFile));
             //指定文件sheet页
             XSSFSheet sheet = wb.getSheetAt(0);
             //获得EXCEL行数
@@ -55,7 +55,7 @@ public class ExcelReport {
             } else {
                 System.out.println("行为空");
             }
-            FileOutputStream os = new FileOutputStream(path);
+            FileOutputStream os = new FileOutputStream(reportFile);
             wb.write(os);
             os.close();
         } catch (Exception ex) {

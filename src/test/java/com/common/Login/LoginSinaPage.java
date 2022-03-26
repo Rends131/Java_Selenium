@@ -13,7 +13,7 @@ public class LoginSinaPage extends TestSinaMail {
 
 
     //登录新浪邮箱
-    public void loginSinaMali(String mailUrl, String account, String password, String titleAst) throws InterruptedException {
+    public void loginSinaMali(String reportFile,String mailUrl, String account, String password, String titleAst) throws InterruptedException {
 
         logger.info("进入邮箱");
         driver.get(mailUrl);
@@ -31,10 +31,10 @@ public class LoginSinaPage extends TestSinaMail {
         if (impatl.equals(titleAst)) {
             logger.info("断言成功");
             logger.info("登陆完成");
-            writeExcel(packageName + "sina登录测试", className, methodName, "sina登录", "pass", "");
+            writeExcel(reportFile,packageName + "sina登录测试", className, methodName, "sina登录", "pass", "");
         } else {
             logger.info("断言失败");
-            writeExcel(packageName + "sina登录测试", className, methodName, "sina登录", "fail", "");
+            writeExcel(reportFile,packageName + "sina登录测试", className, methodName, "sina登录", "fail", "");
         }
     }
 }

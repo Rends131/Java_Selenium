@@ -10,7 +10,7 @@ public class SendMailSina extends TestSinaMail {
     //获取类名
     private String className = this.getClass().getName();
 
-    public void senSinaMail(String recipient, String subject, String filePath, String end) throws InterruptedException {
+    public void senSinaMail(String reportFile,String recipient, String subject, String filePath, String end) throws InterruptedException {
 
         logger.info("进入sina邮箱");
         driver.findElement(By.xpath("//*[@id='coreBtn']/ul/li[1]/a")).click();
@@ -24,7 +24,7 @@ public class SendMailSina extends TestSinaMail {
         logger.info("上传文件");
         String fileHash = fileHash = WriteFile.writeFile(filePath);//写入随机字符串，更改文件hash
         try {
-            driver.findElement(By.name("atth1")).sendKeys(filePath);
+            driver.findElement(By.name("atth1")).sendKeys(reportFile);
             Thread.sleep(1000);
         } catch (Exception e) {
             logger.info("文件上传报错");
@@ -40,11 +40,11 @@ public class SendMailSina extends TestSinaMail {
 
         if (endAss.equals(end)) {
             logger.info("sina邮箱：断言成功");
-            writeExcel(packageName + "Sina发送邮件测试", className, methodName, "文件hash:" + fileHash, "pass", "");
+            writeExcel(reportFile,packageName + "Sina发送邮件测试", className, methodName, "文件hash:" + fileHash, "pass", "");
 
         } else {
             logger.info("sina邮箱：断言失败");
-            writeExcel(packageName + "Sina发送邮件测试", className, methodName, "文件hash:" + fileHash, "fail", "发送失败");
+            writeExcel(reportFile,packageName + "Sina发送邮件测试", className, methodName, "文件hash:" + fileHash, "fail", "发送失败");
         }
         logger.info("运行完成");
     }
