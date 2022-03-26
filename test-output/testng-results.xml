@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="50482" started-at="2022-03-14T14:22:23Z" finished-at="2022-03-14T14:23:13Z">
+    <groups>
+    </groups>
+    <test name="D:/demo/auto-autotest" duration-ms="50482" started-at="2022-03-14T14:22:23Z" finished-at="2022-03-14T14:23:13Z">
+      <class name="com.cases.TestSinaMail">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.cases.TestSinaMail@62e7f11d]" name="setUp" is-config="true" duration-ms="1119" started-at="2022-03-14T22:22:51Z" finished-at="2022-03-14T22:22:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="LoginSinaTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.cases.TestSinaMail@62e7f11d]" name="LoginSinaTest" duration-ms="19888" started-at="2022-03-14T22:22:52Z" data-provider="LoginSina" finished-at="2022-03-14T22:23:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://mail.sina.com.cn/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[18709229141]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ren1312426844]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1312426844@qq.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[测试]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[src/main/resources/7.20部分商品上新清单1.xlsx]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[新浪邮箱]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[您的邮件已发送]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginSinaTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.cases.TestSinaMail@62e7f11d]" name="tearDown" is-config="true" duration-ms="740" started-at="2022-03-14T22:23:12Z" finished-at="2022-03-14T22:23:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.cases.TestSinaMail -->
+      <class name="com.cases.Test126Mail">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.cases.Test126Mail@3972a855]" name="setUp" is-config="true" duration-ms="1597" started-at="2022-03-14T22:22:23Z" finished-at="2022-03-14T22:22:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="LoginTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.cases.Test126Mail@3972a855]" name="LoginTest" duration-ms="26063" started-at="2022-03-14T22:22:24Z" data-provider="Login126" finished-at="2022-03-14T22:22:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.126.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[T18969076410]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Test1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[m18709229141@163.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[测试]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[src/main/resources/7.20部分商品上新清单1.xlsx]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[126邮箱]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[邮件发送成功]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.cases.Test126Mail@3972a855]" name="tearDown" is-config="true" duration-ms="808" started-at="2022-03-14T22:22:50Z" finished-at="2022-03-14T22:22:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.cases.Test126Mail -->
+    </test> <!-- D:/demo/auto-autotest -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

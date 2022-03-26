@@ -25,6 +25,9 @@ public class Login extends ExcelReport {
 
     public static String dataFileTest = System.getProperty("user.dir")+ "\\src\\main\\resources\\datas\\TestData.xlsx";
 
+    public static String reprotFile = System.getProperty("user.dir")+ "\\src\\main\\resources\\datas\\TestData.xlsx";
+
+
     //测试前初始化
     @BeforeMethod
     public void setUp() {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="D:/demo/auto-autotest"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="19.888">
+  <properties />
+  
+  
+            <testcase name="LoginSinaTest" time="19.888" classname="com.cases.TestSinaMail" />
+      
+</testsuite>
