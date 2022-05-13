@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadExcel {
-
     // testNG 方法，返回一个二位数组，  传入文件路径，和sheetName
     // 文件支持xlsx 和xls
     public static Object[][] getData(File file, String sheetName) throws IOException {
@@ -54,7 +53,6 @@ public class ReadExcel {
             }
             //将fields的数据兑现存储到records的list中
             records.add(fields);
-
         }
         //定义函数返回值，即Object[][]
         //将存储测试数据的list转换为一个Object的二维数组
@@ -65,6 +63,4 @@ public class ReadExcel {
         }
         return results;
     }
-
-
 }
